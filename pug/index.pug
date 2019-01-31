@@ -1,0 +1,57 @@
+extends partial/layout.pug
+
+block post-head
+	meta(name='google-site-verification' content='AL7oDAq0FKRk3RMs1oYjXo1RVUzbuSaQDWT5tv1VplE')
+	meta(name='yandex-verification' content='27d5828266d59f5a')
+	script(src='js/index.js')
+	- var fingerprint = "D4FE E4C3 2A8F 551F FC8E  E73B D205 4A6B 9263 8802"
+
+block main
+
+	.seven.columns
+		include:markdown-it(html) /posts/main.md
+
+	.five.columns
+		include partial/sitemap.pug
+
+		#contact.sidebar-box
+			h4 Contact
+			div
+				b Dariusz Max Adamski
+			div
+				i.fas.fa-envelope
+				a(href='mailto:max@adamski.xyz') max@adamski.xyz
+			div
+				i.fab.fa-github
+				a(href='https://github.com/maxadamski') Github
+			div
+				i.fab.fa-linkedin
+				a(href='https://linkedin.com/in/dariuszmaxadamski') LinkedIn
+			div
+				i.fas.fa-key
+				a(href='res/ssh_max.txt') SSH
+				span &nbsp;|&nbsp;
+				a(href='res/gpg_max.txt') GPG
+				span &nbsp;Key
+			div
+				i.fas.fa-fingerprint
+				a#finger(title=fingerprint onclick="copy_finger();") GPG Fingerprint
+
+		#links.sidebar-box
+			h4 Quick Links
+			div
+				i.far.fa-calendar-alt
+				a(href="https://fc.put.poznan.pl/sites/default/files/d_inf_1st_3sem.pdf") Timetable
+			div
+				i.fas.fa-university
+				a(href="https://github.com/maxadamski/wiwiwi") Coursework
+			div
+				i.fas.fa-keyboard
+				a(href="dvorak.html") Portable Dvorak
+			div
+				i.far.fa-file-code
+				a(href="https://github.com/maxadamski/dotfiles") My Dotfiles
+			div
+				i.fas.fa-ghost
+				a(href="http://ghost.put.poznan.pl/en/") Koło GHOST
+

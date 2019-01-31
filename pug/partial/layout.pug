@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+
+		title Max's Homepage
+
+		meta(name='description' content="Max's personal website")
+		meta(name='author' content='Dariusz Max Adamski')
+
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nixie+One|Open+Sans')
+		link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
+
+		link(rel='stylesheet' href='css/normalize.css')
+		link(rel='stylesheet' href='css/skeleton.css')
+		link(rel='stylesheet' href='css/style.css')
+
+		link(rel='icon' href='img/favicon.png')
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+
+		block post-head
+
+	body
+		#gradient
+
+		.container
+			header
+				a.name-link(href='index.html')
+					h1.name Max Adamski
+
+			main
+				block main
+
+			footer
+				div.copyright
+					small &copy; Dariusz Max Adamski

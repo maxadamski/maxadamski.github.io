@@ -1,0 +1,15 @@
+extends partial/layout.pug
+
+block main
+	.row
+		.seven.columns
+			h3 Portable Dvorak
+			p
+			| Quick links for downloading the portable
+			| Dvorak Programmer keyboard layout,
+			| for multiple operating systems.
+
+		.five.columns
+			include partial/sitemap.pug
+
+	include:markdown-it(html) /posts/dvorak.md

@@ -1,0 +1,8 @@
+{
+	"name": "",
+	"dependencies": {
+		"jstransformer-markdown-it": "*",
+		"pug": "*",
+		"pug-cli": "*"
+	}
+}
