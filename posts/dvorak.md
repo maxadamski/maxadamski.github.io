@@ -4,7 +4,7 @@ The Dvorak Simplified Keyboard is a keyboard layout patented during 1936 by Augu
 
 Dvorak proponents claim the layout requires less finger motion and reduces errors compared to the standard QWERTY keyboard arrangement. It is claimed that the reduction in finger distance traveled permits faster typing while also reducing repetitive strain injuries, although that claim is controversial.
 
-Read more on [Roland Kaufmann's page][kaufmann], and on the [Wikipedia][wikipedia].
+Read more on [Roland Kaufmann's page][kaufmann], and on [Wikipedia][wikipedia].
 
 ##### Linux
 This simple command will suffice:
