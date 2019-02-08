@@ -5,12 +5,13 @@
 - Only on holidays - <https://adventofcode.com>
 - I never remember - <https://fuckingfunctionpointers.com>
 - Cheat sheets - <http://sheet.shiar.nl>
+- Good Ideas, Through the Looking Glass, Wirth - [PDF](https://www.inf.ethz.ch/personal/wirth/Articles/GoodIdeas_origFig.pdf)
 
-#### Education
+#### Science
 
 - Introduction to Statistical Learining - <http://www-bcf.usc.edu/~gareth/ISL>
 - Elements of Statistical Learning - <https://web.stanford.edu/~hastie/ElemStatLearn>
-- All of Statistics - <http://www.ic.unicamp.br/~wainer/cursos/1s2013/ml/livro.pdf>
+- All of Statistics - [PDF](http://www.ic.unicamp.br/~wainer/cursos/1s2013/ml/livro.pdf)
 - Machine Learning, Flach - <http://people.cs.bris.ac.uk/~flach/mlbook>
 - Deep Learning, Goodfellow - <http://www.deeplearningbook.org>
 
@@ -32,6 +33,21 @@
 - Relaxing tetris clone - <https://qntm.org/files/hatetris/hatetris.html>
 - Trippy shaders - <http://glslsandbox.com/>
 - Only for 90's kids - <https://90kids.com/games/>
+
+#### Art
+
+- Salvador Dali Masterpieces - [dalipaintings.com][dalipaintings]
+- Thirty-six Views of Mount Fuji - [Hokusai][hokusai], [Hiroshige][hiroshige]
+- Works by Hieronymus Bosch - [paintings][bosch_paintings], [drawings][bosch_drawings]
+- 913 works by Vincent van Gogh - [Wikipedia][van_gogh]
+
+[bosch_drawings]: https://en.wikipedia.org/wiki/Hieronymus_Bosch_drawings
+[bosch_paintings]: https://en.wikipedia.org/wiki/List_of_paintings_by_Hieronymus_Bosch
+[dalipaintings]: https://www.dalipaintings.com
+[van_gogh]: https://en.wikipedia.org/wiki/List_of_works_by_Vincent_van_Gogh
+[hokusai]: https://en.wikipedia.org/wiki/Thirty-six_Views_of_Mount_Fuji
+[hiroshige]: https://en.wikipedia.org/wiki/Thirty-six_Views_of_Mount_Fuji_(Hiroshige)
+
 
 #### Comics
 
