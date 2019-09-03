@@ -10,13 +10,14 @@ I also love free software and old-school command line.
 
 #### Machine Learning
 
-- Synthetic data
-- Learning to rank
-- Time series
+- Probabilistic programming
+- Attention-based models
 - Interpretable models
+- Synthetic data
 
 #### Software Engineering
 
+- Dependent type theory
 - Programming languages
 - Minimalist software
 - Data-oriented design
