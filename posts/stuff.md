@@ -9,11 +9,15 @@
 
 #### Science
 
+Free science books for everyone! These are some of my favourites.
+
 - Introduction to Statistical Learining - <http://www-bcf.usc.edu/~gareth/ISL>
 - Elements of Statistical Learning - <https://web.stanford.edu/~hastie/ElemStatLearn>
 - All of Statistics - [PDF](http://www.ic.unicamp.br/~wainer/cursos/1s2013/ml/livro.pdf)
 - Machine Learning, Flach - <http://people.cs.bris.ac.uk/~flach/mlbook>
 - Deep Learning, Goodfellow - <http://www.deeplearningbook.org>
+- Probabilistic Models of Cognition - <https://probmods.org>
+- Homotopy Type Theory - <https://homotopytypetheory.org/book>
 
 #### Software
 
