@@ -30,6 +30,7 @@ body > header {
 
 body > main {
     grid-area: mn;
+	margin-right: 20px;
 }
 
 body > aside {
@@ -153,7 +154,7 @@ h5 {
 }
 
 p {
-	padding-left: 2px;
+	padding-left: 1px;
     line-height: 1.6;
 }
 
@@ -170,6 +171,21 @@ hr {
     border: none;
     border-top: 1px solid #DBDBDB;
     margin: 0;
+}
+
+code {
+	border-radius: 3px;
+	border: 1px solid #DBDBDB;
+	padding: 2px;
+	background: whitesmoke;
+	color: #222222;
+	font-family: monospace;
+	overflow-wrap: break-word;
+}
+
+.crypto-id {
+	font-size: 0.7em;
+	word-break: break-all;
 }
 
 #copyright {
@@ -189,7 +205,12 @@ hr {
         margin-left: 0;
     }
 
+	body > main {
+		margin-right: 0;
+	}
+
     .name {
         font-size: 2.5rem;
     }
 }
+
