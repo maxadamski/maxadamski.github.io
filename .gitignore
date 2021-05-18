@@ -1,6 +1,2 @@
-# tmp
-_tmp/
-
-# node
-package-lock.json
-node_modules/
+tmp/
+xlite/

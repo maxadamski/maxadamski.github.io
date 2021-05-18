@@ -1,4 +1,10 @@
-#### Programming
+# Cool Stuff
+
+Here's a collection of interesting things I found on the Internet,
+so this is basically my bookmarks bar.
+If you're bored, or want to kill some time, you might find something of value here.
+
+## Programming
 
 - Learn X in Y minutes - <https://learnxinyminutes.com>
 - Languages, side by side - <http://hyperpolyglot.org>
@@ -7,7 +13,7 @@
 - Cheat sheets - <http://sheet.shiar.nl>
 - Good Ideas, Through the Looking Glass, Wirth - [PDF](https://www.inf.ethz.ch/personal/wirth/Articles/GoodIdeas_origFig.pdf)
 
-#### Science
+## Science
 
 Free science books for everyone! These are some of my favourites.
 
@@ -19,7 +25,7 @@ Free science books for everyone! These are some of my favourites.
 - Probabilistic Models of Cognition - <https://probmods.org>
 - Homotopy Type Theory - <https://homotopytypetheory.org/book>
 
-#### Software
+## Software
 
 - My stars - <https://github.com/maxadamski?tab=stars>
 - Software that sucks less - <https://suckless.org>
@@ -29,7 +35,7 @@ Free science books for everyone! These are some of my favourites.
 - Great Linux Distribution - [Void Linux](https://voidlinux.org)
 - Good Linux Distribution - [Arch Linux](https://archlinux.org)
 
-#### Games
+## Games
 
 - Dungeon - <http://adarkroom.doublespeakgames.com>
 - Awesome games - <https://github.com/leereilly/games>
@@ -38,7 +44,7 @@ Free science books for everyone! These are some of my favourites.
 - Trippy shaders - <http://glslsandbox.com/>
 - Only for 90's kids - <https://90kids.com/games/>
 
-#### Art
+## Art
 
 - Salvador Dali Masterpieces - [dalipaintings.com][dalipaintings]
 - Thirty-six Views of Mount Fuji - [Hokusai][hokusai], [Hiroshige][hiroshige]
@@ -51,11 +57,4 @@ Free science books for everyone! These are some of my favourites.
 [van_gogh]: https://en.wikipedia.org/wiki/List_of_works_by_Vincent_van_Gogh
 [hokusai]: https://en.wikipedia.org/wiki/Thirty-six_Views_of_Mount_Fuji
 [hiroshige]: https://en.wikipedia.org/wiki/Thirty-six_Views_of_Mount_Fuji_(Hiroshige)
-
-
-#### Comics
-
-- <https://xkcd.com>
-- <http://geek-and-poke.com>
-- <http://spikedmath.com/585.html>
 

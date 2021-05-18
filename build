@@ -1,0 +1,29 @@
+#!/bin/bash
+
+markdown() {
+	multimarkdown --nolabels $@
+}
+
+./templ src/page.html \
+	main="$(cat src/index-main.html)" \
+	aside="$(cat src/index-aside.html)" \
+	title="Max's Homepage" \
+	descr="My personal website" \
+	> docs/index.html
+
+./templ src/page.html \
+	main="$(markdown src/dvorak.md)" \
+	aside="" \
+	title="Portable DVP" \
+	descr="Portable for the Dvorak Programmer keyboard layout" \
+	> docs/dvorak.html
+
+./templ src/page.html \
+	main="$(markdown src/stuff.md)" \
+	aside="" \
+	title="Internet Stuff" \
+	descr="Stuff I found on the internet" \
+	> docs/stuff.html
+
+#git diff-index --quiet HEAD -- || git add -A || git commit || git push
+

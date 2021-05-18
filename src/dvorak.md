@@ -1,4 +1,10 @@
-#### Programmer Dvorak Keyboard Layout
+# Portable Programmer Dvorak
+
+Quick links for downloading the portable
+Dvorak Programmer keyboard layout,
+for multiple operating systems.
+
+## Programmer Dvorak Keyboard Layout
 
 The Dvorak Simplified Keyboard is a keyboard layout patented during 1936 by August Dvorak and his brother-in-law, William Dealey.
 
@@ -6,12 +12,13 @@ Dvorak proponents claim the layout requires less finger motion and reduces error
 
 Read more on [Roland Kaufmann's page][kaufmann], and on [Wikipedia][wikipedia].
 
-##### Linux
+### Linux
 This simple command will suffice:
 `setxkbmap pl dvp -option caps:swapescape`
 
 A more permanent solution is to modify the keyboard `InputClass` section in `xorg.conf`.
-```
+
+```xorg
 Section "InputClass"
         Identifier         "Keyboard"
         MatchIsKeyboard    "yes"
@@ -22,7 +29,7 @@ EndSection
 Setting the layout in the framebuffer differs across distributions.
 In the case of Void Linux, just add the line `KEYMAP=dvorak-programmer` to `rc.conf`
 
-##### Windows
+### Windows
 [<i class='fa fa-file-download'></i> Download][pkl_down]
 a configured minimal portable version of
 [Portable Keyboard Layout][pkl_home].
@@ -35,7 +42,7 @@ To make the changes permanent, copy the program folders to, for example, `Progra
 and create a shortcut to `pkl.exe` and/or `dual-key-remap.exe` in
 `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`.
 
-##### macOS
+### macOS
 [<i class='fab fa-github'></i> Dowload][polski_dvp]
 by going to the project repository.
 
@@ -44,7 +51,7 @@ Follow the installation instructions, then select the layout in system settings,
 [kaufmann]: https://www.kaufmann.no/roland/dvorak/
 [wikipedia]: https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard
 [pkl_home]: http://pkl.sourceforge.net/
-[pkl_down]: https://github.com/maxadamski/maxadamski.github.io/raw/master/res/pkl.zip
-[dkr_down]: https://github.com/maxadamski/maxadamski.github.io/raw/master/res/dual-key-remap.zip
+[pkl_down]: https://github.com/maxadamski/maxadamski.github.io/raw/master/docs/static/pkl.zip
+[dkr_down]: https://github.com/maxadamski/maxadamski.github.io/raw/master/docs/static/dual-key-remap.zip
 [dkr_home]: https://github.com/ililim/dual-key-remap
 [polski_dvp]: https://github.com/maxadamski/polski-dvp
