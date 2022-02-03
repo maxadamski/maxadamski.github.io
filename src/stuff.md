@@ -4,6 +4,11 @@ Here's a collection of interesting things I found on the Internet,
 so this is basically my bookmarks bar.
 If you're bored, or want to kill some time, you might find something of value here.
 
+## Utilities
+
+- P2P file sharing in the browser - <https://file.pizza>
+- Shader playground - <http://glslsandbox.com/>
+
 ## Programming
 
 - Learn X in Y minutes - <https://learnxinyminutes.com>
@@ -12,6 +17,11 @@ If you're bored, or want to kill some time, you might find something of value he
 - I never remember - <https://fuckingfunctionpointers.com>
 - Cheat sheets - <http://sheet.shiar.nl>
 - Good Ideas, Through the Looking Glass, Wirth - [PDF](https://www.inf.ethz.ch/personal/wirth/Articles/GoodIdeas_origFig.pdf)
+
+## AI
+
+- A Bitter Lesson - <http://www.incompleteideas.net/IncIdeas/BitterLesson.html>
+- A Better Lesson - <https://rodneybrooks.com/a-better-lesson/>
 
 ## Science
 
@@ -41,7 +51,6 @@ Free science books for everyone! These are some of my favourites.
 - Awesome games - <https://github.com/leereilly/games>
 - Tons of puzzles - <https://www.increpare.com/>
 - Relaxing tetris clone - <https://qntm.org/files/hatetris/hatetris.html>
-- Trippy shaders - <http://glslsandbox.com/>
 - Only for 90's kids - <https://90kids.com/games/>
 
 ## Art
