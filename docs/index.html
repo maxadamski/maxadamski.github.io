@@ -16,11 +16,92 @@
         padding: 0 1em;
         max-width: 66ch;
     }
+
+    #gfx {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        pointer-events: none;
+    }
 </style>
 <body>
     <h1>Cześć!</h1>
-    <a href="mailto:maxadamski@gmx.com">maxadamski@gmx.com</a></br>
+    <a href="mailto:maxadamski@gmx.com">maxadamski@gmx.com</a><br>
     <a href="https://github.com/maxadamski">github</a><br>
-    <a href="https://linkedin.com/in/maxadamski98">linkedin</a>
+    <a href="https://linkedin.com/in/maxadamski98">linkedin</a><br>
+    <canvas id="gfx"></canvas>
 </body>
+<script type="text/javascript">
+'use strict'
+
+let n_particles = 100000
+let particles = Array(n_particles)
+
+let pixels = null
+let canvas = null
+let image = null
+let ctx = null
+
+function animate(ts) {
+    let ro = 28
+    let sigma = 10
+    let beta = 8/5
+    let dt = 0.005
+    let sxy = 12
+    let w = canvas.width
+    let h = canvas.height
+    let tx = w/2
+    let ty = h/2
+
+    pixels.fill(0)
+    for (let i = 0; i < n_particles; i++) {
+        let p = particles[i]
+        let x = p.x
+        let y = p.y
+        let z = p.z
+
+        p.x += dt*sigma*(y - x)
+        p.y += dt*(x*(ro - z) - y)
+        p.z += dt*(x*y - beta*z)
+
+        pixels[Math.floor(sxy*p.y + ty)*w + Math.floor(sxy*p.x + tx)] = p.c
+    }
+
+    ctx.putImageData(image, 0, 0)
+    requestAnimationFrame(animate)
+}
+
+function initParticles() {
+    for (let i = 0; i < n_particles; i++) {
+        let p = {}
+        p.x = Math.random()
+        p.y = Math.random()
+        p.z = Math.random()
+        // TODO: Improve colors.
+        p.c = 0xFF000000
+        particles[i] = p
+    }
+}
+
+function initCanvas() {
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    pixels = new Uint32Array(canvas.width*canvas.height)
+    image = new ImageData(new Uint8ClampedArray(pixels.buffer), canvas.width, canvas.height)
+}
+
+onresize = function () {
+    initCanvas()
+}
+
+onload = function () {
+    canvas = document.getElementById('gfx')
+    ctx = canvas.getContext('2d')
+    initCanvas()
+    initParticles()
+    animate()
+}
+</script>
 </html>
