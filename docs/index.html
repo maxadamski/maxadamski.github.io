@@ -17,24 +17,57 @@
         max-width: 66ch;
     }
 
+    main {
+        position: relative;
+        z-index: 1;
+    }
+
     #gfx {
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         height: 100vh;
         width: 100vw;
         pointer-events: none;
+        z-index: 0;
+    }
+
+    body, a {
+        color: black;
+        background: white;
+    }
+
+    a:hover {
+        color: white;
+        background: black;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body, a {
+            color: white;
+            background: black;
+        }
+
+        a:hover {
+            color: black;
+            background: white;
+        }
+
     }
 </style>
 <body>
+<canvas id="gfx"></canvas>
+<main>
     <h1>Cześć!</h1>
     <a href="mailto:maxadamski@gmx.com">maxadamski@gmx.com</a><br>
     <a href="https://github.com/maxadamski">github</a><br>
     <a href="https://linkedin.com/in/maxadamski98">linkedin</a><br>
-    <canvas id="gfx"></canvas>
+</main>
 </body>
 <script type="text/javascript">
 'use strict'
+
+let dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches
 
 let n_particles = 100000
 let particles = Array(n_particles)
@@ -54,6 +87,7 @@ function animate(ts) {
     let h = canvas.height
     let tx = w/2
     let ty = h/2
+    let color = dark_mode ? 0xFFFFFFFF : 0xFF000000
 
     pixels.fill(0)
     for (let i = 0; i < n_particles; i++) {
@@ -66,7 +100,7 @@ function animate(ts) {
         p.y += dt*(x*(ro - z) - y)
         p.z += dt*(x*y - beta*z)
 
-        pixels[Math.floor(sxy*p.y + ty)*w + Math.floor(sxy*p.x + tx)] = p.c
+        pixels[Math.floor(sxy*p.y + ty)*w + Math.floor(sxy*p.x + tx)] = color
     }
 
     ctx.putImageData(image, 0, 0)
@@ -79,8 +113,6 @@ function initParticles() {
         p.x = Math.random()
         p.y = Math.random()
         p.z = Math.random()
-        // TODO: Improve colors.
-        p.c = 0xFF000000
         particles[i] = p
     }
 }
@@ -90,6 +122,10 @@ function initCanvas() {
     canvas.height = window.innerHeight
     pixels = new Uint32Array(canvas.width*canvas.height)
     image = new ImageData(new Uint8ClampedArray(pixels.buffer), canvas.width, canvas.height)
+}
+
+window.matchMedia("(prefers-color-scheme: dark)").onchange = function (e) {
+    dark_mode = e.matches
 }
 
 onresize = function () {
