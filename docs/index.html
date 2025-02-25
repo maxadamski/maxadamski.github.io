@@ -8,6 +8,11 @@
 	<link rel="icon" href="static/favicon.ico">
 </head>
 <style type="text/css">
+    html, body {
+        /* Disable pull-to-refresh on mobile. */
+        overscroll-behavior: none;
+    }
+
     body {
         font-family: courier, monospace;
         font-size: 16px;
@@ -55,6 +60,7 @@
 
     @media only screen and (max-width: 512px) {
         #gfx {
+            /* Center simulation on narrow screens. */
             left: calc(50% - 256px);
         }
     }
