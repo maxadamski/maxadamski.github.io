@@ -26,8 +26,6 @@
         position: fixed;
         left: 0;
         top: 0;
-        height: 100vh;
-        width: 100vw;
         pointer-events: none;
         z-index: 0;
     }
@@ -54,6 +52,12 @@
         }
 
     }
+
+    @media only screen and (max-width: 512px) {
+        #gfx {
+            left: calc(50% - 256px);
+        }
+    }
 </style>
 <body>
 <canvas id="gfx"></canvas>
@@ -68,6 +72,9 @@
 'use strict'
 
 let dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches
+let canvas_size = 512
+let pixel_ratio = 1
+let pause_sim = false
 
 let n_particles = 100000
 let particles = Array(n_particles)
@@ -78,15 +85,21 @@ let image = null
 let ctx = null
 
 function animate(ts) {
+    if (pause_sim) {
+        requestAnimationFrame(animate)
+        return
+    }
+
     let ro = 28
     let sigma = 10
     let beta = 8/5
     let dt = 0.005
-    let sxy = 12
+    let sx = pixel_ratio * 12.5
+    let sy = pixel_ratio * 9
     let w = canvas.width
     let h = canvas.height
     let tx = w/2
-    let ty = h/2
+    let ty = h/2 - 10*pixel_ratio
     let color = dark_mode ? 0xFFFFFFFF : 0xFF000000
 
     pixels.fill(0)
@@ -96,11 +109,22 @@ function animate(ts) {
         let y = p.y
         let z = p.z
 
+        // Lorenz attractor.
         p.x += dt*sigma*(y - x)
         p.y += dt*(x*(ro - z) - y)
         p.z += dt*(x*y - beta*z)
 
-        pixels[Math.floor(sxy*p.y + ty)*w + Math.floor(sxy*p.x + tx)] = color
+        let ix = Math.floor(sx*p.x + tx)
+        let iy = Math.floor(sy*p.y + ty)
+
+        // Skip drawing outside of canvas.
+        if (ix < 0 || ix > canvas.width) continue
+        if (iy < 0 || iy > canvas.height) continue
+
+        // Dithering by skipping pixels in a checkerboard pattern.
+        //if (ix % 2 == 0 || iy % 2 == 0) continue
+
+        pixels[iy*w + ix] = color
     }
 
     ctx.putImageData(image, 0, 0)
@@ -118,8 +142,11 @@ function initParticles() {
 }
 
 function initCanvas() {
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    pixel_ratio = window.devicePixelRatio
+    canvas.width = canvas_size*pixel_ratio
+    canvas.height = canvas_size*pixel_ratio
+    canvas.style.width = `${canvas_size}px`
+    canvas.style.height = `${canvas_size}px`
     pixels = new Uint32Array(canvas.width*canvas.height)
     image = new ImageData(new Uint8ClampedArray(pixels.buffer), canvas.width, canvas.height)
 }
@@ -139,5 +166,10 @@ onload = function () {
     initParticles()
     animate()
 }
+
+document.onkeypress = function (e) {
+    e = e || window.event
+    if (e.key === ' ') pause_sim = !pause_sim
+};
 </script>
 </html>
