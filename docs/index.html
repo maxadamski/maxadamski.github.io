@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="My personal website">
 	<meta name="author" content="Max Adamski">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="static/favicon.ico">
+    <title>Max Adamski | Wizytówka</title>
 </head>
 <style type="text/css">
     html, body {
@@ -18,24 +19,24 @@
         font-size: 16px;
         line-height: 1.5;
         margin: 0;
-        padding: 0 1em;
+        padding: 0.5em 1em;
         max-width: 66ch;
     }
 
-    main {
-        position: relative;
-        z-index: 1;
-    }
-
     #gfx {
-        position: fixed;
-        left: 0;
-        top: 0;
         pointer-events: none;
-        z-index: 0;
+        display: block;
+        margin: auto;
     }
 
-    body, a {
+    hr {
+        border: solid 0.5px black;
+        border-bottom-width: 0;
+        border-top-width: 1px;
+        border-color: black;
+    }
+
+    body, a, p {
         color: black;
         background: white;
     }
@@ -46,7 +47,7 @@
     }
 
     @media (prefers-color-scheme: dark) {
-        body, a {
+        body, a, p {
             color: white;
             background: black;
         }
@@ -56,22 +57,27 @@
             background: white;
         }
 
+        hr {
+            border-color: white;
+        }
     }
 
     @media only screen and (max-width: 512px) {
         #gfx {
             /* Center simulation on narrow screens. */
+            position: fixed;
             left: calc(50% - 256px);
         }
     }
 </style>
 <body>
-<canvas id="gfx"></canvas>
 <main>
-    <h1>Cześć!</h1>
-    <a href="mailto:maxadamski@gmx.com">maxadamski@gmx.com</a><br>
-    <a href="https://github.com/maxadamski">github</a><br>
-    <a href="https://linkedin.com/in/maxadamski98">linkedin</a><br>
+    <b>Max Adamski</b><br>
+    <hr>
+    <a href="mailto:maxadamski@gmx.com">kontakt</a> 
+    <a href="https://github.com/maxadamski">git</a>
+    <a href="https://linkedin.com/in/maxadamski98">cv</a> 
+    <canvas id="gfx"></canvas>
 </main>
 </body>
 <script type="text/javascript">
